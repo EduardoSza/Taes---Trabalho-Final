@@ -1,0 +1,36 @@
+<!-- pagamento.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento - Portal de Vida Saudável</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Portal de Vida Saudável</h1>
+    </header>
+
+    <section class="payment-section">
+        <h2>Escolha a Modalidade de Pagamento</h2>
+        <form id="formPagamento" method="POST" action="backend/processarPagamento">
+            <label for="modalidade">Modalidade</label>
+            <select id="modalidade" name="modalidade" required>
+                <option value="mensal">Mensal</option>
+                <option value="trimestral">Trimestral</option>
+                <option value="semestral">Semestral</option>
+                <option value="anual">Anual</option>
+            </select>
+
+            <button type="submit">Realizar Pagamento</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Portal de Vida Saudável</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

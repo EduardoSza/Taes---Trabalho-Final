@@ -1,0 +1,65 @@
+<!-- cadastro.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Portal de Vida Saudável</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Portal de Vida Saudável</h1>
+    </header>
+
+    <section class="form-section">
+        <h2>Cadastro de Aluno</h2>
+        <form id="formCadastro" method="POST" action="backend/cadastrarAluno">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" required>
+
+            <label for="idade">Idade</label>
+            <input type="number" id="idade" name="idade" required>
+
+            <label for="sexo">Sexo</label>
+            <select id="sexo" name="sexo" required>
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+                <option value="outro">Outro</option>
+            </select>
+
+            <label for="altura">Altura (em cm)</label>
+            <input type="number" id="altura" name="altura" required>
+
+            <label for="peso">Peso (em kg)</label>
+            <input type="number" id="peso" name="peso" required>
+
+            <label for="objetivo">Objetivo</label>
+            <select id="objetivo" name="objetivo" required>
+                <option value="qualidade_de_vida">Qualidade de vida</option>
+                <option value="hipertrofia_muscular">Hipertrofia muscular</option>
+                <option value="forca_muscular">Força muscular</option>
+                <option value="resistencia_aerobica">Resistência aeróbica</option>
+                <option value="outros">Outros</option>
+            </select>
+
+            <label for="descricao_objetivo">Descrição do objetivo (se "outros")</label>
+            <textarea id="descricao_objetivo" name="descricao_objetivo" placeholder="Descreva seu objetivo" rows="4"></textarea>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Portal de Vida Saudável</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
